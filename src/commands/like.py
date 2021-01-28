@@ -9,7 +9,7 @@ import socket
 
 
 @logger.catch()
-@bp.on.message_handler(FromMe(),text=[p+"+лайк", p+"лайкнуть"])
+@bp.on.message_handler(FromMe(),text=[p+"лайк", p+"лайкнуть"])
 async def function(ans: Message):
     try:
         user1 = await bp.api.users.get(user_ids=ans.reply_message.from_id, fields='photo_id')
